@@ -1,0 +1,101 @@
+<section id="contact">
+    <svg class="serviceSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#141414" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,229.3C384,224,480,160,576,165.3C672,171,768,245,864,250.7C960,256,1056,192,1152,192C1248,192,1344,256,1392,288L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <div class="row section-intro">
+       <div class="col-twelve">
+
+           <h5>Contact</h5>
+           <h1>{{socialInfo.title}}</h1>
+
+           <p class="lead">{{socialInfo.description}}</p>
+
+       </div> 
+   </div> <!-- /section-intro -->
+
+   <div class="row contact-form">
+
+       <div class="col-twelve">
+
+        <!-- form -->
+        <form name="contactForm" id="contactForm" method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <div class="form-field">
+                    {{ form.name }}
+                </div>
+                <div class="form-field">
+                    {{ form.email }}
+                </div>
+                <div class="form-field">
+                    {{ form.subject }}
+                </div>
+                <div class="form-field">
+                    {{ form.message }}
+                </div>
+                <div class="form-field">
+                    <button class="submitform" type="submit">Submit</button>
+                    <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>
+                        <div class="s-loader">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        
+                
+        <!-- contact-success -->
+        <div id="responseMessage" class = "successMessage">
+            
+        </div>
+
+     </div> <!-- /col-twelve -->
+       
+   </div> <!-- /contact-form -->
+
+   <div class="row contact-info">
+
+       <div class="col-four tab-full">
+
+           <div class="icon">
+               <i class="icon-pin"></i>
+           </div>
+
+           <h5>Where to find me</h5>
+
+           <p>{{socialInfo.address}}
+        </p>
+
+       </div>
+
+       <div class="col-four tab-full collapse">
+
+           <div class="icon">
+               <i class="icon-mail"></i>
+           </div>
+
+           <h5>Email Me At</h5>
+
+           <p>{{socialInfo.email1}}<br>
+                   {{socialInfo.email2}}			     
+           </p>
+
+       </div>
+
+       <div class="col-four tab-full">
+
+           <div class="icon">
+               <i class="icon-phone"></i>
+           </div>
+
+           <h5>Call Me At</h5>
+
+           <p>Phone: {{socialInfo.phone_number1}}<br>
+               Mobile: {{socialInfo.phone_number2}}<br>
+                 Fax: {{socialInfo.phone_number3}}
+           </p>
+       </div>
+   </div> <!-- /contact-info -->
+</section> 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Blog Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .blog-container {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://via.placeholder.com/800x400'); /* Replace with your image URL */
+        }
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+        }
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .blog-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .blog-image {
+                height: 250px;
+            }
+
+            .blog-title {
+                font-size: 1.5rem;
+            }
+
+            .blog-description {
+                font-size: 0.9rem;
+            }
+        }
+        .go-back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            color: gray;
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-size: 16px; 
+            font-weight: bold; 
+            transition: background-color 1s ease;transform 0.2s ease; color 1s ease;
+            margin-top: 10px;
+            font-family: poppins-bold;
+            border:1px solid #ff0077;
+        }
+        
+        .go-back-link:hover {
+            background-color: #ff0077;
+            transform: scale(1.05);
+            color: white;
+        }
+        
+        .go-back-link:focus {
+            outline: 2px solid #ff0077;
+            outline-offset: 2px; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <div class="blog-image">
+            <img src="{{blog.image.url}}" alt="">
+        </div>
+        <div class="blog-content">
+            <h1 class="blog-title">{{blog.title}}</h1>
+            <p class="blog-description" style="white-space: pre-line; line-height: 1.6; margin-bottom: 10px;">
+                {{blog.description}}
+            </p>
+            <a href="{% url 'home' %}" class="go-back-link">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!-- modal-1 start -->
+{% for project in allProjects %}
+   <div id="modal-{{project.id}}" class="popup-modal slider mfp-hide" >	 
+         <div class="img-box" 
+         style="background-image: url({% if project.fullImage %}'{{ project.fullImage.url }}'
+         {% endif %});">
+      </div>   	
+      <div class="description-box">
+         <h4>{{project.name}}</h4>
+         <p style="font-weight: bold; color: gray; padding:0; margin-top:-5px;">{{project.title}}</p>		      
+         <p style = "padding:0; margin-top:-10px;"><span style="font-weight: bold; color: gray;">Used Technology</span>: <small>{{project.technology}}</small></p>
+         <p>{{project.description}}</p>
+   </div>
+
+      <div class="link-box">
+         <a href="{{project.gitHubLink}}" target = "__blank">github</a>
+         <a href="{{project.liveLink}}" target = "__blank">live link</a>
+      </div>
+      <!-- Close Button -->
+      <span class="popup-modal-dismiss" 
+      style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.21); 
+            color: white; display: flex; justify-content: center; align-items: center; text-decoration: none; 
+            font-size: 20px; position: absolute; top: 10px; right: 10px; cursor: pointer;">
+         <i class="fa fa-times" style="color: black;"></i>
+      </span>		      
+   </div> 	
+{% endfor %}
+<!-- modal-1 end -->

@@ -1,0 +1,29 @@
+{% load static %}
+<div class="row resume-timeline">
+    <div class="col-twelve resume-header">
+        <h2>Work Experience</h2>
+    </div> 
+    <div class="col-twelve">
+        {% for expe in experience %}
+            <div class="timeline-block">
+                <div class="timeline-ico">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="timeline-header">
+                    <h3>{{expe.title}}</h3>
+                    <p>{{expe.start_date}} - 
+                        {% if expe.is_current %}
+                            Present
+                        {% else %}
+                        {{expe.end_date}}
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="timeline-content">
+                    <h4 class="company">{{expe.company}}</h4>
+                    <p>{{expe.summary}}</p>
+                </div>
+            </div>
+        {% endfor %} 		
+    </div> 
+</div> 

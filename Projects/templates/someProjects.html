@@ -1,0 +1,20 @@
+<!-- project-item start-->
+{% for project in allProjects %}
+   <div class="bgrid folio-item" >
+      <div class="item-wrap">
+         <img src="{{project.image.url}}" alt="Liberty">
+         <a href="#modal-{{project.id}}" class="overlay">
+            <div class="folio-item-table">
+               <div class="folio-item-cell">
+                  <h3 class="folio-title">{{project.name}}</h3>	     					    
+                  <span class="folio-types">
+                     {{project.title}}
+                  </span>
+               </div>        	
+            </div>                    
+         </a>
+      </div>	               
+   </div> 
+{% endfor %}
+<!-- project-item end-->
+

@@ -1,0 +1,31 @@
+{% load static %}
+<div class="row resume-timeline">
+    <div class="col-twelve resume-header">
+        <h2>Education</h2>
+    </div> 
+    <div class="col-twelve">
+        <div class="timeline-wrap">
+            {% for education in educations %}
+                <div class="timeline-block">
+                    <div class="timeline-ico">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-header">
+                        <h3>{{education.degree}}</h3>
+                        <p>{{education.start_date}} - 
+                            {% if education.is_current %}
+                                Present
+                            {% else %}
+                                {{education.end_date}}
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>{{education.university_name}}</h4>
+                        <p>{{education.description}}</p>
+                    </div>
+                </div> 
+            {% endfor %}
+        </div>
+    </div> 
+</div> 

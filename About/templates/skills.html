@@ -1,0 +1,72 @@
+{% load static %}
+<div class="skills-container" >
+    <div class="skills-grid">
+        <!-- Expertise Section -->
+        <div class="technology">
+            <h1>Expertise</h1>
+            <div class="technology-items">
+                {% for exp in expSkills %}
+                    <div class="s-skill" data-tooltip="{{exp.skillName}}">
+                        <div class="logo_box">
+                            <img src="{{exp.skillLogo.url}}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Comfortable Technology Section -->
+        <div class="technology">
+            <h1>Comfortable</h1>
+            <div class="technology-items">
+                {% for com in comSkills %}
+                    <div class="s-skill" data-tooltip="{{ com.skillName }}">
+                        <div class="logo_box">
+                            <img src="{{com.skillLogo.url}}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Familiar Technology Section -->
+        <div class="technology">
+            <h1>Familiar</h1>
+            <div class="technology-items">
+                {% for fam in famSkills %}
+                    <div class="s-skill" data-tooltip="{{ fam.skillName }}">
+                        <div class="logo_box">
+                            <img src="{{fam.skillLogo.url}}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Hosting Technology Section -->
+        <div class="technology">
+            <h1>Hosting</h1>
+            <div class="technology-items">
+                {% for hosting in hostSkills %}
+                    <div class="s-skill" data-tooltip="{{ hosting.skillName }}">
+                        <div class="logo_box">
+                            <img src="{{hosting.skillLogo.url}}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Other Technology Section -->
+        <div class="technology">
+            <h1>Others Knowledge</h1>
+            <div class="technology-items">
+                {% for other in othSkills %}
+                    <div class="s-skill" data-tooltip="{{ other.skillName }}">
+                        <div class="logo_box">
+                            <img src="{{other.skillLogo.url}}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+

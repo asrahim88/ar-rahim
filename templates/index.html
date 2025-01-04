@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!---===========: basic page needs :============= -->
+   <meta charset="utf-8">
+   <title>ar_rahim</title>
+   <meta name="description" content="">  
+   <meta name="author" content="">
+   
+   <!---===========: Mobile Specific Meta :======== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	
+
+ 	<!--===================: CSS :================== -->
+	 <link rel="stylesheet" href="{% static "css/base.css" %}">  
+	 <link rel="stylesheet" href="{% static "css/main.css" %}">
+	 <link rel="stylesheet" href="{% static "css/vendor.css" %}">     
+	 
+
+ 	<!--==============: Scripts :================ -->  
+	 <script src="{% static "js/modernizr.js" %}"></script>
+	 <script src="{% static "js/pace.min.js" %}"></script>
+	 
+ 	<!--==============: Favicon :============= -->  
+	 <link rel="icon" type="image/png" href="{% static "favicon.ico" %}">
+	 
+ 	
+	<!--==============: animation :============= -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+	
+<body id="top">
+	<!--==============: Header Start :============ -->  
+	{% include "header.html" %}
+	<!--================: Header End :============ -->  
+
+	<!--===========: Start Intro Section :======== -->  
+	{% include "homeIntro.html" %}
+   <!--============: End Intro Section :=============-->
+
+   <!--===========: About Section Start :===========-->
+	{% include "about.html" %}
+   <!--=============: About Section End :==========-->
+
+	<!--==========: Resume Section Start :=========-->
+	{% include "resume.html" %}
+	<!--===========: Resume Section End :==========-->
+
+	<!---========== Project Section Start ========= -->
+	{% include "projects.html" %}
+	<!---=========== Project Section end ========== -->
+
+	<!--==========: Blog Section Start :============ -->
+	{% include "blog.html" %}
+	<!--==========: Blog Section End :============ -->
+	
+   <!--==============: contact Start :============== -->
+   {% include "contactInformation.html" %}
+   <!--==============: contact End :============== -->
+
+   <!--============: footer Start :=================-->
+   {% include "footerSocialIcon.html" %}
+   <!--============: footer End :=================-->
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!--==========: Java Script start :=========== --> 
+   <script src="{% static "js/jquery-2.1.3.min.js" %}"></script>
+   <script src="{% static "js/plugins.js" %}"></script>
+   <script src="{% static "js/main.js" %}"></script>
+   <!--============: Java Script end :=========== -->
+
+   <!--=====: Java Script Animation Start :===== -->
+   
+   <!--======: Java Script Animation end :====== --> 
+</body>
+</html>

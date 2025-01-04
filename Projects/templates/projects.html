@@ -1,0 +1,36 @@
+{% load static %}
+<section id="portfolio">
+    <svg class="educationSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(235, 235, 235)" fill-opacity="1" d="M0,320L80,304C160,288,320,256,480,245.3C640,235,800,245,960,240C1120,235,1280,213,1360,202.7L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+    <div id = "exactPortfolio"></div>
+    <!-- project Intro Start -->
+    <div class="row section-intro">
+        <div class="col-twelve">
+            <h5>Projects</h5>
+            <h1>Check Out Some of My Works.</h1>
+            <p class="lead">{{projectsIntro.describe}}</p>
+
+        </div>   		
+    </div> 
+    <!-- project Intro end --> 
+    
+    <!-- project content start --> 
+    <div class="row portfolio-content">
+        <div class="col-twelve">
+            <!-- projects-wrapper start-->
+            <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+                <!-- project-item start-->
+                {% include "someProjects.html" %}
+                <!-- project-item end-->
+
+<!--==============: modal popups start :=========== -->
+                {% include "modals.html" %}
+<!--=============: modal popups end :============== -->
+            </div> 
+            <!-- projects-wrapper end --> 
+        </div>  
+    </div>  
+    <div class="projectsBtn">
+        <a href="{% url "allProjects" %}" class="customButton">More Projects</a>
+    </div>
+    <!-- project content end -->	
+</section>  
