@@ -7,7 +7,6 @@ my_env/
 my_env/
 
 # Django specific
-db.sqlite3
 /static/
 media/
 .env
