@@ -14,7 +14,8 @@ SECRET_KEY = 'django-insecure-eoktix-s+kndk=#q#m=bx)vma&@cxjd(^pm2m1!()ly%t!_d5z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://ar-rahim-rf51.onrender.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ar-rahim-rf51.onrender.com','localhost', '127.0.0.1']
+
 
 
 
