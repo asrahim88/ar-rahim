@@ -4,11 +4,9 @@ __pycache__/
 
 # Virtual environment
 my_env/
-my_env/
+
 
 # Django specific
-/static/
-media/
 .env
 
 
