@@ -2752,5 +2752,34 @@ footer .copyright span:last-child::after {
 
 /* blog section end */
 
+/* auto type style start */
+#dynamic-title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: gray;
+	display: inline-block;
+	position: relative; /* আন্ডারলাইন জন্য প্রয়োজনীয় */
+}
 
+/* আন্ডারলাইন স্টাইল */
+#dynamic-title::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px; /* টেক্সটের নিচে কিছু স্পেস */
+	width: 0; /* শুরুর অবস্থায় আন্ডারলাইন নেই */
+	height: 2px;
+	background-color:gray;
+	transition: width 0.3s ease-in-out; /* স্মুথ ইফেক্ট */
+}
+
+#dynamic-title.typing::after {
+	width: 100%; /* পুরো আন্ডারলাইন দেখাও */
+}
+
+@keyframes blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+}
+/* auto type style end */
 /* custom css end */

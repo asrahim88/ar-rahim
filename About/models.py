@@ -33,3 +33,10 @@ class HostingModel(SkillBaseModel):
     pass
 class OthersModel(SkillBaseModel):
     pass
+
+class Title(models.Model):
+    name = models.CharField(max_length=100, unique=True)  # টাইটেল এর নাম
+    created_at = models.DateTimeField(auto_now_add=True)  # কখন তৈরি হয়েছে
+
+    def __str__(self):
+        return self.name

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from About.models import AboutModel, ExpertiseModel, ComfortableModel, FamiliarModel, HostingModel, OthersModel
+from About.models import AboutModel, ExpertiseModel, ComfortableModel, FamiliarModel, HostingModel, OthersModel, Title
 from Resume.models import Experience, Education, ResumeWholeDescription
 from Blogs.models import BlogModel, WholeBlogDescribe
 from Projects.models import  AllProjects, WholeDescribe
@@ -26,6 +26,7 @@ def home(request):
     wholeBlogDescribe = WholeBlogDescribe.objects.all()
     
     socialInfo = SocialInformation.objects.all()
+    titles = Title.objects.all().values_list('name', flat=True)  # টাইটেল এর লিস্ট
     context = {
         "about": info[0], 
         "expSkills":  expertise, 
@@ -41,6 +42,7 @@ def home(request):
         "allBlogs": allBlogs,
         "wholeBlogDescribe": wholeBlogDescribe[0],
         "socialInfo": socialInfo[0],
+        'titles': list(titles),
         }
     
     # AJAX রিকোয়েস্ট চেক করা

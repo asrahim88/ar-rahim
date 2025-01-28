@@ -10,7 +10,9 @@ background-size: cover;">
                  <h5>Hello, World.</h5>
                  <h1>I'm {{about.name}}.</h1>
                  <p class="intro-position">
-                     <span>{{about.title}}</span>
+                    <span>
+                        <small id="dynamic-title"></small>
+                    </span>
                  </p>
                  <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
              </div>  
@@ -26,3 +28,7 @@ background-size: cover;">
      </ul>      	
  <!--=========: End intro-social :=========-->      	
 </section> 
+
+<script>
+    const titles = {{ titles|safe }};
+</script>

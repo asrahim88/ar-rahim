@@ -364,6 +364,50 @@ contactForm.addEventListener('submit', function(e) {
 // <--------------: form reload end :------------->
 
 
+// <--------------: auto type start :------------->
+// Django থেকে পাঠানো ডাটা
+
+const titleElement = document.getElementById('dynamic-title');
+
+let currentIndex = 0; // কোন টাইটেল দেখানো হচ্ছে তা ট্র্যাক করে
+let charIndex = 0;    // টাইটেলের কোন ক্যারেক্টার টাইপ হচ্ছে তা ট্র্যাক করে
+
+function typeTitle() {
+	titleElement.classList.add('typing'); // টাইপিং শুরু হলে আন্ডারলাইন দেখাও
+
+	if (charIndex < titles[currentIndex].length) {
+		// একটি একটি করে ক্যারেক্টার যোগ করা
+		titleElement.textContent += titles[currentIndex][charIndex];
+		charIndex++;
+		setTimeout(typeTitle, 100); // প্রতি ক্যারেক্টারের মধ্যে ১০০ms
+	} else {
+		// পুরো টাইটেল টাইপ হয়ে গেলে আন্ডারলাইন রাখো এবং ২ সেকেন্ড অপেক্ষা করো
+		setTimeout(() => {
+			titleElement.classList.remove('typing'); // আন্ডারলাইন সরাও
+			setTimeout(eraseTitle, 500); // মুছার আগে সামান্য বিরতি
+		}, 2000);
+	}
+}
+
+function eraseTitle() {
+	if (charIndex > 0) {
+		// একটি একটি করে ক্যারেক্টার মুছে ফেলা
+		titleElement.textContent = titles[currentIndex].slice(0, charIndex - 1);
+		charIndex--;
+		setTimeout(eraseTitle, 50); // প্রতি মুছে ফেলার মধ্যে ৫০ms
+	} else {
+		// পরবর্তী টাইটেলে যাও
+		currentIndex = (currentIndex + 1) % titles.length;
+		typeTitle(); // নতুন টাইটেল টাইপ করা শুরু
+	}
+}
+
+// টাইপিং ইফেক্ট শুরু
+typeTitle();
+// <--------------: auto type end :------------->
+
+
+
 // <--------------: custom js end :----------------->
 
 
