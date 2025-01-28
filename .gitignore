@@ -1,0 +1,11 @@
+# Python এবং Django সম্পর্কিত
+*.pyc
+__pycache__/
+db.sqlite3  # ডাটাবেস ফাইল গিট থেকে বাদ দিন
+media/  # মিডিয়া ফাইল গিট থেকে বাদ দিন (প্রয়োজন হলে)
+*.env  # .env ফাইল গোপন রাখুন
+
+# IDE/Editor ফাইল
+.vscode/
+*.log
+*.idea/
