@@ -104,7 +104,7 @@ p.lead {
 	font-family: "lora-regular", serif !important;
 	font-size: 2rem;
 	line-height: 1.8;
-	color: #888888;
+	color: #3f3e3e;
 }
 @media only screen and (max-width:768px) {
 	p.lead {
@@ -957,7 +957,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- 
  */
 .grey-section {
-	background: #ebebeb;
+	background: #c6ccd0;
 }
 .grey-section p.lead {
 	color: #7d7d7d;
@@ -1038,6 +1038,10 @@ header .top-bar {
 	position: absolute;
 	left: 90px;
 	top: 0;
+}
+header #customTopBorder {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 header .logo {
 	float: left;
@@ -1173,6 +1177,9 @@ header .logo a {
 	height: auto;
 	clear: both;
 	display: none;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+
 }
 .main-navigation > li {
 	display: block;
@@ -1317,6 +1324,7 @@ header .logo a {
 	font-size: 1.3rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
+	border-radius: 5px;
 }
 .intro-content .button:hover, .intro-content .button:focus {
 	border-color: #cc005f;
@@ -1333,7 +1341,7 @@ header .logo a {
 }
 
 .intro-social {
-	display: block;
+	/* display: block; */
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -1344,11 +1352,13 @@ header .logo a {
 }
 .intro-social li {
 	display: inline-block;
-	margin: 0 50px;
+	margin: 0 20px;
 	padding: 0;
 }
+
 .intro-social li a, .intro-social li a:visited {
 	color: #FFFFFF;
+	
 }
 .intro-social li a:hover, .intro-social li a:focus {
 	color: #cc005f;
@@ -1425,7 +1435,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #FFFFFF;
+	background: #acb7c3;
 	padding-top: 12rem;
 	margin-bottom: -10px;
 }
@@ -1722,8 +1732,8 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #FFFFFF;
-	padding-top: 12rem;
+	background: #b0b0b1;
+	padding-top: 50px;
 	padding-bottom: 12rem;
 }
 #portfolio .folio-item {
@@ -2194,7 +2204,7 @@ header .logo a {
 #contact {
 	/* background: ; */
 	background: #00000056;
-	padding-top: 12rem;
+	padding-top: 45px;
 	padding-bottom: 7.2rem;
 }
 #contact .section-intro h1 {
@@ -2307,6 +2317,7 @@ header .logo a {
 	width: 100%;
 	background: #FF0077;
 	color: #FFFFFF;
+	border-radius: 5px;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
 	background: #cc005f;
@@ -2531,13 +2542,14 @@ footer .copyright span:last-child::after {
 	-webkit-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	border-radius: 50%;
 }
 #go-top a i {
 	font-size: 1.6rem;
 	line-height: inherit;
 }
 #go-top a:hover {
-	background: #000000;
+	background: #00000056;
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -2715,14 +2727,14 @@ footer .copyright span:last-child::after {
 
 /* svg style start */
 .educationSvg{
-	margin-top: -200px;
+	margin-top: -80px;
 	box-sizing: border-box;
 }
 .exactPortfolio {
 	padding-top: 10px;
 }
 .serviceSvg {
-	margin-top: -200px;
+	margin-top: -100px;
 	box-sizing: border-box;
 }
 /* svg style end */
@@ -2782,4 +2794,107 @@ footer .copyright span:last-child::after {
 	50% { opacity: 0; }
 }
 /* auto type style end */
+
+/* about style start */
+.aboutBtn {
+	border-radius: 5px;
+}
+/* about style end */
+
+/* email design start */
+.customColor {
+    color: gray;
+    text-decoration: underline solid gray;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+.customColor:hover, 
+.customColor:focus-visible, 
+.customColor:active, 
+.customColor:visited {
+    color: gray !important; /* সব স্টেটেই গ্রে থাকবে */
+}
+
+/* email design end */
+
+
+/* reach out me on social media start */
+.contact-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icons a {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-icons a:hover {
+    transform: scale(1.1);
+}
+
+.contact-icons img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+/* reach out me on social media end */
+
+/* calling option style start */
+/* ডিফল্টভাবে নাম্বারটি হিডেন রাখুন */
+/* টুলটিপ স্টাইল */
+.calling {
+    position: relative; /* টুলটিপের জন্য পজিশন রিলেটিভ */
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden; /* ডিফল্টভাবে টুলটিপ লুকানো */
+    width: 120px;
+    background-color: #333; /* টুলটিপের ব্যাকগ্রাউন্ড কালার */
+    color: #fff; /* টুলটিপের টেক্সট কালার */
+    text-align: center;
+    border-radius: 5px; /* টুলটিপের কর্নার রাউন্ডেড */
+    padding: 5px;
+    position: absolute; /* টুলটিপের পজিশন */
+    z-index: 1;
+    bottom: 125%; /* টুলটিপের অবস্থান (ইমেজের উপরে) */
+    left: 50%;
+    margin-left: -60px; /* টুলটিপকে কেন্দ্রে রাখা */
+    opacity: 0; /* ডিফল্টভাবে টুলটিপ ট্রান্সপারেন্ট */
+    transition: opacity 0.3s; /* টুলটিপের এনিমেশন */
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* টুলটিপের নিচে তীর চিহ্ন */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* তীর চিহ্নের স্টাইল */
+}
+
+/* হোভার করার পর টুলটিপ দেখানো */
+.calling:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+/* calling option style end */
+
 /* custom css end */

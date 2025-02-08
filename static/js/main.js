@@ -301,7 +301,7 @@ const skills = document.querySelectorAll('.s-skill');
 
 skills.forEach(skill => {
     skill.addEventListener('click', () => {
-        alert(skill.getAttribute('data-tooltip'));
+        // alert(skill.getAttribute('data-tooltip'));
     });
 });
 
@@ -406,6 +406,23 @@ function eraseTitle() {
 typeTitle();
 // <--------------: auto type end :------------->
 
+// <--------------: menu radius start :------------->
+document.getElementById("changeBorder").addEventListener("click", () => {
+	let element = document.getElementById("customTopBorder");
+
+	// চেক করছি বর্তমান স্টাইল আছে কি না
+	if (element.style.borderBottomLeftRadius === "0px") {
+		element.style.borderBottomLeftRadius = "5px";
+		element.style.borderBottomRightRadius = "5px";
+		element.style.transition = "border-radius ease-in-out 1s";
+	} else {
+		element.style.borderBottomLeftRadius = "0px";
+		element.style.borderBottomRightRadius = "0px";
+		element.style.transition = "border-radius ease-in-out 0s";
+		
+	}
+});
+// <--------------: menu radius end :------------->
 
 
 // <--------------: custom js end :----------------->

@@ -406,6 +406,15 @@ function eraseTitle() {
 typeTitle();
 // <--------------: auto type end :------------->
 
+// <------------: menu border radius start :----------->
+
+
+// <------------: menu border radius end :----------->
+
+
+// <-----------: footer call toolTip start :---------->
+// <-----------: footer call toolTip end :---------->
+
 
 
 // <--------------: custom js end :----------------->

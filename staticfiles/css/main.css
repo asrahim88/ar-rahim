@@ -1039,6 +1039,7 @@ header .top-bar {
 	left: 90px;
 	top: 0;
 }
+
 header .logo {
 	float: left;
 	margin-left: 20px;
@@ -1173,6 +1174,12 @@ header .logo a {
 	height: auto;
 	clear: both;
 	display: none;
+	border-bottom-left-radius: 20px; /* Add a circular curve to the bottom-left corner */
+	border-bottom-right-radius: 20px; /* Add a circular curve to the bottom-right corner */
+	position: absolute; /* Ensure it can overlap other elements */
+	top: -10px !important; /* Move it upwards by 50px */
+	z-index: 1; /* Ensure it appears behind the header */
+
 }
 .main-navigation > li {
 	display: block;
@@ -2782,4 +2789,37 @@ footer .copyright span:last-child::after {
 	50% { opacity: 0; }
 }
 /* auto type style end */
+
+
+/* footer css call start */
+.tooltip {
+    position: relative;
+}
+
+.call-button {
+    display: block;
+    position: relative;
+}
+
+/* ইমেজ স্টাইল */
+.call-button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* টুলটিপ ডিজাইন (ডিফল্ট হাইড) */
+
+
+/* footer css call end */
+
+/* header menu design border start */
+header #customTopBorder {
+	border-bottom-right-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+  }
+  
+/* header menu design border end */
+
 /* custom css end */

@@ -1,7 +1,9 @@
-<section id="intro" style="background: #15151555 url('{{about.background_img.url}}') center calc(-100px); 
+<section id="intro" style="background: #15151555 url('{{about.background_img.url}}') center calc(-130px); 
 -webkit-background-size: cover;
 -moz-background-size: cover;
-background-size: cover;">
+background-size: cover; 
+background-attachment: fixed; 
+background-position: center;">
  <div class="intro-overlay"></div>	
  <!--=========: Start intro-content :============-->
      <div class="intro-content">
@@ -31,4 +33,11 @@ background-size: cover;">
 
 <script>
     const titles = {{ titles|safe }};
+
+    if (window.innerWidth <= 768) {
+        document.getElementById("intro").style.background = "#15151555 url('{{ about.background_img.url }}') right";
+        document.getElementById("intro").style.backgroundSize = "cover";
+        document.getElementById("intro").style.backgroundRepeat = "no-repeat"; 
+        document.getElementById("intro").style.backgroundAttachment = "fixed"; 
+    }
 </script>

@@ -6,6 +6,7 @@ class AboutModel(models.Model):
     title = models.CharField(max_length=400, blank=True)
     description = models.TextField(max_length=1000, blank=True)
     background_img = models.ImageField(upload_to="background/photos", blank=True, null=True)
+  
     profile_img = models.ImageField(upload_to="profile/photos", blank=True, null=True)
     cv = models.FileField(upload_to="cv/uploads", blank=True, null=True)  # PDF আপলোডের জন্য ফাইল ফিল্ড
     

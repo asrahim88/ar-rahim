@@ -1,24 +1,54 @@
-<header>   	
-    <div class="row">
-    <!--==========: Top Bar Start :=========== -->  
-        <div class="top-bar">
-            <a class="menu-toggle" href="#"><span>Menu</span></a>
-            <div class="logo">
-                <a href="https://ar-rahim-cxtp.onrender.com/"></a>
-            </div>		      
-            <nav id="main-nav-wrap">
-                <ul class="main-navigation">
-                    <li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-                    <li><a class="smoothscroll"  href="#about" title="">About</a></li>
-                    <li><a class="smoothscroll"  href="#skilled" title="">Skill</a></li>
-                    <li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
-                    <li><a class="smoothscroll"  href="#exactPortfolio" title="">Projects</a></li>
-                    <li><a class="smoothscroll"  href="#services" title="">Blogs</a></li>					
-                    <li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
-                    <li><a href="{{ about.cv.url }}" download="CV" title="Download CV">Download CV</a></li>				
-                </ul>
-            </nav>    		
-    <!--==========: Top Bar End :============ -->  
-        </div>
-    </div> 
-</header> 
+<header>
+  <div class="row">
+    <div class="top-bar" id="customTopBorder">
+      <a class="menu-toggle" id="changeBorder" href="#">
+        <span>Menu</span>
+      </a>
+      <div class="logo">
+        <a href="index.html"></a>
+      </div>
+      <nav id="main-nav-wrap">
+        <ul class="main-navigation">
+          <li><a class="smoothscroll" href="#intro" title="">Home</a></li>
+          <li><a class="smoothscroll" href="#about" title="">About</a></li>
+          <li><a class="smoothscroll" href="#skilled" title="">Skill</a></li>
+          <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+          <li><a class="smoothscroll" href="#exactPortfolio" title="">Projects</a></li>
+          <li><a class="smoothscroll" href="#services" title="">Blogs</a></li>
+          <li><a class="smoothscroll" href="#contactinfo" title="">Contact</a></li>
+          <li>
+            <a href="{{ about.cv.url }}" download="CV" title="Download CV">Download CV</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Toggle border-radius only when clicking on the #changeBorder element.
+  document.getElementById("changeBorder").addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation(); // Prevent event from bubbling up.
+
+    let element = document.getElementById("customTopBorder");
+    
+    // Toggle the border radius
+    if (element.style.borderBottomLeftRadius === "0px") {
+      element.style.borderBottomLeftRadius = "15px";
+      element.style.borderBottomRightRadius = "15px";
+      element.style.transition = "border-radius ease-in-out 2s";
+    } else {
+      element.style.borderBottomLeftRadius = "0px";
+      element.style.borderBottomRightRadius = "0px";
+      element.style.transition = "border-radius ease-in-out 0s";
+    }
+  });
+
+  // Prevent clicks on navigation menu items from bubbling up.
+  document.querySelectorAll("#main-nav-wrap a").forEach((menuLink) => {
+    menuLink.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  });
+</script>
