@@ -65,7 +65,7 @@
            </div>
 
            <h5>Where to find me</h5>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29198.4276679762!2d90.37505293540511!3d23.82558702588585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6e9ac1b2dbd%3A0xa98a52dad38edc98!2sCantonment%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1738513006330!5m2!1sen!2sbd" width="200" height="100" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style = "border-radius= 10px;"></iframe>
+            <iframe src="{{socialInfo.address}}" width="200" height="100" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style = "border-radius= 10px;"></iframe>
         </p>
        </div>
        <div class="col-four tab-full collapse">
@@ -74,16 +74,15 @@
            </div>
            <h5>Let's Talk Over Email</h5>
         <p>
-            <a href="mailto:{{ socialInfo.email1 }}?subject=Hello&body=I want to contact you" class = "customColor">
+            <a class = "customColor" href="mailto:{{ socialInfo.email1 }}">
                 {{ socialInfo.email1 }}
-            </a><br>
-            <a class = "customColor" href="mailto:{{ socialInfo.email2 }}?subject=Hello&body=I want to contact you">
+            </a>
+            <br>
+            <a class = "customColor" href="mailto:{{ socialInfo.email2 }}">
                 {{ socialInfo.email2 }}
             </a>
         </p>
-        
-        
-
+    
        </div>
 
        <div class="col-four tab-full">
@@ -96,32 +95,18 @@
            <div class="contact-section">
                 <h5>Reach Out Anytime</h5>
                 <div class="contact-icons">
-                    <a href="https://wa.me/+8801748983774" target="_blank" class="whatsapp">
+                    <a href="https://wa.me/{{socialInfo.whatsApNumber}}" target="_blank" class="whatsapp">
                         <img src="{% static "images/whatsapp.png" %}" alt="WhatsApp">
                     </a>
-                    <a href="skype:.cid.991ed748c2f83721?call" class="skype">
+                    <a href="skype:{{socialInfo.skype}}?chat" class="skype">
                         <img src="{% static "images/skype.png" %}" alt="Skype">
                     </a>
-                    {% comment %} <a class= "calling" href="tel:+8801748983774" >
-                            <img src="{% static 'images/mobile.jpg' %}" alt="Call">
-                    </a>                  {% endcomment %}
-                    <a class="calling" href="tel:+8801748983774">
+                    <a class="calling" href="tel:{{socialInfo.phone_number}}">
                         <img src="{% static 'images/mobile.jpg' %}" alt="Call">
-                        <span class="tooltip">01577081667</span> <!-- টুলটিপ হিসেবে নাম্বারটি -->
+                        <span class="tooltip">{{socialInfo.phone_number}}</span> <!-- টুলটিপ হিসেবে নাম্বারটি -->
                     </a>
                 </div>
             </div>
        </div>
    </div> <!-- /contact-info -->
 </section> 
-
-<script>
-    // calling ক্লাসের উপরে হোভার ইভেন্ট যোগ করুন
-    document.querySelector('.calling').addEventListener('mouseover', function() {
-        document.getElementById('phoneNumber').style.display = 'inline'; // নাম্বারটি দেখান
-    });
-
-    document.querySelector('.calling').addEventListener('mouseout', function() {
-        document.getElementById('phoneNumber').style.display = 'none'; // নাম্বারটি লুকান
-    });
-</script>
