@@ -2532,8 +2532,9 @@ footer .copyright span:last-child::after {
 	text-decoration: none;
 	border: 0 none;
 	display: block;
-	height: 6.6rem;
-	width: 6rem;
+	height: 60px;
+	margin: 5px;
+	width: 60px;
 	line-height: 6.6rem;
 	text-align: center;
 	background: #cc005f;
