@@ -1045,23 +1045,27 @@ header #customTopBorder {
 }
 header .logo {
 	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
-	margin-top: 25px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
 	position: relative;
 }
 header .logo a {
 	display: block;
-	margin-top: -10px;
+	margin: 0;
 	padding: 0;
 	border: none;
+	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 92px;
-	height: 35px;
-	background: url("../images/logo.png") no-repeat center;
-	background-size: 95px 35px;
+	width: 170px;
+	height: 50px;
+	background: url("../images/logo.svg") no-repeat center;
+	background-size: contain;
+	transition: filter 0.3s ease;
+
 }
+
 
 /**
  * menu toggle - (_layout.css)
